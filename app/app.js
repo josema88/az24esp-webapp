@@ -6,7 +6,8 @@ const router = express.Router();
 const port = app_values.port;
 const path = app_values.path;
 router.use(function (req,res,next) {
-  console.log('/' + req.method);
+  textDate = new Date().toLocaleString();
+  console.log('Event Date:' + textDate + ' - Requested URL:' + req.url +' - HTTP Method: /' + req.method);
   next();
 });
 
